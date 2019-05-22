@@ -5,33 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Car Parts XML</title>
 </head>
 
 <body>
-
     <div id="container"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $.ajax({
-                type: "GET",
-                url: "carpartsfeedawin.xml",
-                dataType: "xml",
-                success: parseXml
-            });
-        });
-
-        function parseXml(xml) {
-            $("#container").html("<ul id='content' data-role='listview' data-inset='true'></ul>");
-            $(xml).find("prod").each(function () {
-                $("#container").append("<li><a href='" + $(this).find("mImage").text() + "'><img src='" + $(
-                        this)
-                    .find("mImage").text() + "'/><h2>" + $(this).find("mCat").text() + "</h2><p>" + $(this)
-                    .find("buynow").text() + "</p></a></li>");
-            });
-        }
-    </script>
+    <script src="testXML.JS"> </script>
 </body>
 
 </html>
