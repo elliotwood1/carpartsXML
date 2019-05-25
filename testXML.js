@@ -18,7 +18,7 @@ function parseXml(xml) {
       $("#container").append(
         "<li><a href='" +
           $(this)
-            .find("mImage")
+            .find("awTrack")
             .text() +
           "'><img src='" +
           $(this)
